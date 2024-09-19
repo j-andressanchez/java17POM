@@ -11,15 +11,15 @@ public class Login {
     @Steps
     LoginPage loginPage;
 
-    @Given("Se encuentra en la login page de sauce demo")
+    @Given("Se encuentra en la login page de orange")
     public void abrirLoginPage(){
         loginPage.open();
     }
 
-    @When("digita las credenciales standard")
+    @When("digita las credenciales de inicio")
     public void digitarCredencialesStandar(){
-        loginPage.diligenciarUsuario("standard_user");
-        loginPage.diligenciarPassword("secret_sauce");
+        loginPage.diligenciarUsuario("Admin");
+        loginPage.diligenciarPassword("admin123");
     }
 
     @When("da click en el boton login")
@@ -27,8 +27,4 @@ public class Login {
         loginPage.clickLogin();
     }
 
-    @Then("valida que el título sea {string}")
-    public void validarTitulo(String title){
-        loginPage.validarTitulo(title);
-    }
 }
